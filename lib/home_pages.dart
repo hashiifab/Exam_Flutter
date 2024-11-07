@@ -18,62 +18,101 @@ class HomePages extends StatelessWidget {
         backgroundColor: Colors.black,
       ),
       body: Padding(
-          padding: EdgeInsets.all(20),
-          child: Column(children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                  Column(
-                    children: [
-                     Card(
-                      color: Colors.black,
-                      child: Container(
-                        width: 300,
-                        height: 100,
-                        child: Text('Makanan', style: TextStyle(color: Colors.white),),
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                         )
-                  ),)]  
-                  ), ]),
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    FloatingActionButton(
-                  backgroundColor: Colors.black,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ListNote()),
-                    );
-                  },
-                  child: const Icon(Icons.list, color: Colors.white),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Card(
+              color: Colors.black,
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(20),
+                child: const Text(
+                  'Makan saiang',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                const SizedBox(
-                  width: 10,
+              ),
+            ),
+            Card(
+              color: Colors.black,
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(20),
+                child: const Text(
+                  'Nelajar',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                FloatingActionButton(
-                  backgroundColor: Colors.black,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => AddNote()),
-                    );
-                  },
-                  child: const Icon(Icons.add, color: Colors.white),
+              ),
+            ),
+            Card(
+              color: Colors.black,
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(20),
+                child: const Text(
+                  'Main',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-
-                  ])
-                
-                
-               
-             
-
-            
-          ])),
+              ),
+            ),
+          ],
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            FloatingActionButton(
+              backgroundColor: Colors.black,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ListNote()),
+                );
+              },
+              child: const Icon(Icons.list, color: Colors.white),
+            ),
+            FloatingActionButton(
+              backgroundColor: Colors.black,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AddNote()),
+                );
+              },
+              child: const Icon(Icons.add, color: Colors.white),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
